@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Omnifood</title>
+    <meta name="description" content="Omnifood—healthy meals delivery" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384‑LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <!-- Ionicons -->
+    <link
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+
+    <!--Animate.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="images/omnilogo.jpg" height="50" alt="Omnifood logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item me-1">
+              <a class="nav-link" href="#features">Food delivery</a>
+            </li>
+            <li class="nav-item me-1">
+              <a class="nav-link" href="#works">How it works</a>
+            </li>
+            <li class="nav-item me-1">
+              <a class="nav-link" href="#cities">Our cities</a>
+            </li>
+            <li class="nav-item me-1">
+              <a class="nav-link" href="#plans">Sign up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="text-white text-center position-relative">
+      <div class="container h-100 d-flex align-items-center hero-text-box">
+        <div class="w-100 text-center">
+          <h1 class="display-4 fw-light mb-4">
+            Goodbye junk food. <br />
+            Hello healthy meals.
+          </h1>
+          <a
+            href="#plans"
+            class="btn btn-primary btn-lg me-2 js--scroll-to-plans"
+            >I’m hungry</a
+          >
+          <a
+            href="#features"
+            class="btn btn-outline-light btn-lg js--scroll-to-start"
+            >Show me more</a
+          >
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Features -->
+      <section id="features" class="py-5 text-center">
+        <div class="p-4 text-center">
+          <h2 class="fw-bold border-bottom border-warning border-3 d-inline">
+            Get food fast — not fast food
+          </h2>
+          <p class="mt-3">
+            Hello, we’re Omnifood, your new premium food delivery service. We
+            know you’re always busy. No time for cooking. So let us take care of
+            that, we’re really good at it, we promise!
+          </p>
+        </div>
+
+        <div class="container my-5">
+          <div class="row g-4 text-center">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card h-100 border-1 shadow-sm">
+                <img
+                  src="images/365.jpg"
+                  class="card-img-top"
+                  alt="Up to 365 days/year"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Up to 365 days/year</h5>
+                  <p class="card-text">
+                    Never cook again! We really mean that. Our subscription
+                    plans include up to 365 days/year coverage. You can also
+                    choose to order more flexibly if that's your style.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card h-100 border-1 shadow-sm">
+                <img
+                  src="https://imgs.search.brave.com/XspNM1dn8Eqt_UzYQV6P24gWrgMoFKepj16-IxMY5h4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1LzEwLzI1LzEy/LzM2MF9GXzUxMDI1/MTI4OF8zN2NkbVVY/ZjV5eGg1S2Ywd1U4/NkxlMkl6ZlJDQ1pl/Yy5qcGc"
+                  class="card-img-top"
+                  alt="Ready in 20 minutes"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Ready in 20 minutes</h5>
+                  <p class="card-text">
+                    You're only twenty minutes away from your delicious and
+                    super healthy meals delivered right to your home. We work
+                    with the best chefs in each town to ensure that you're 100%
+                    happy.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card h-100 border-1 shadow-sm">
+                <img
+                  src="https://imgs.search.brave.com/2CUdly3uzxak8zc_g5bTJWpk-1Bmuna79UWp1qejYxs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by8xMDAtb3JnYW5p/Yy1sYWJlbC1zdGlj/a2VyLWJhZGdlXzk3/NDczMi02MjY5Mi5q/cGc_c2l6ZT02MjYm/ZXh0PWpwZw"
+                  class="card-img-top"
+                  alt="100% organic"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">100% organic</h5>
+                  <p class="card-text">
+                    All our vegetables are fresh, organic and local. Animals are
+                    raised without added hormones or antibiotics. Good for your
+                    health, the environment, and it also tastes better!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="card h-100 border-1 shadow-sm">
+                <img
+                  src="https://imgs.search.brave.com/IEPSK9km1pwbMs5IG36JApWsxfN-Lmis9FECj6uov98/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9hbnl0/aW1lLWFueXdoZXJl/LXNpZ24tcGFnZS1h/bnl0aW1lLWFueXdo/ZXJlLXNpZ24tcGFn/ZS0yMDU4NjY5NDEu/anBn"
+                  class="card-img-top"
+                  alt="Order anything"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Order anything</h5>
+                  <p class="card-text">
+                    We don't limit your creativity, which means you can order
+                    whatever you feel like. You can also choose from our menu
+                    containing over 100 delicious meals. It's up to you!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Meals -->
+      <section id="meals" class="py-5 bg-light">
+        <div class="container">
+          <div class="row g-2">
+            <div class="col-6 col-md-3">
+              <img
+                src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202411/ideally--indians-should-have-how-many-meals-in-a-day-102825391-1x1.jpg?VersionId=3vDEbRDEuYsWLCwGwyffSTDGHY9Yrclw"
+                class="img-fluid rounded"
+                alt="meal1"
+              />
+            </div>
+            <div class="col-6 col-md-3">
+              <img
+                src="https://freshmealplan.com/cdn/shop/files/95-DSC06765.png?v=1723498585"
+                class="img-fluid rounded"
+                alt="meal2"
+              />
+            </div>
+            <div class="col-6 col-md-3">
+              <img
+                src="https://admin.nzprotein.co.nz/img/uploads/two_meals_side_by_side_stock_image.jpg"
+                class="img-fluid rounded"
+                alt="meal3"
+              />
+            </div>
+            <div class="col-6 col-md-3">
+              <img
+                src="https://freshmealplan.com/cdn/shop/files/unnamed_1.png?v=1750701697"
+                class="img-fluid rounded"
+                alt="meal4"
+              />
+            </div>
+          </div>
+          <div class="row g-2 mt-2">
+            <div class="col-6 col-md-3">
+              <img
+                src="https://www.euroschoolindia.com/blogs/wp-content/uploads/2023/11/vegetables-to-create-colorful-and-fun-kids-meals-jpg.webp"
+                class="img-fluid rounded"
+                alt="meal5"
+              />
+            </div>
+            <div class="col-6 col-md-3">
+              <img
+                src="https://www.realsimple.com/thmb/MwX53PMCMK5td1ibn91UyIwHojQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/easy-meals-to-satisfy-everyone-1224FEA_APPS_086_Shortcut-Souffle-with-Pesto-and-Ricotta-6d633808c85f46d991d2a4f7b3f91e4e.jpg"
+                class="img-fluid rounded js--meal-img"
+                alt="meal6"
+              />
+            </div>
+            <div class="col-6 col-md-3">
+              <img
+                src="https://foodconfidence.com/wp-content/uploads/2017/06/formulamealsbreakfastPin.png"
+                class="img-fluid rounded"
+                alt="meal7"
+              />
+            </div>
+            <div class="col-6 col-md-3">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDH9KLEPLExESvuNISJ9cq21nCunXoAVZRVw&s"
+                class="img-fluid rounded"
+                alt="meal8"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works -->
+      <section class="py-5 bg-light" id="works">
+        <div class="container">
+          <div class="row mb-5 text-center">
+            <h2 class="display-6 fw-bold">How it works — Simple as 1, 2, 3</h2>
+          </div>
+
+          <div class="row align-items-center">
+            <div class="col-lg-6 text-center mb-4 mb-lg-0">
+              <img
+                src="images/Phone.png"
+                alt="Omnifood app on iPhone"
+                class="img-fluid animate__animated animate__fadeInUp"
+                style="max-height: 31.25rem"
+              />
+            </div>
+
+            <div class="col-lg-6">
+              <div class="mb-4 d-flex align-items-start">
+                <div class="step-circle me-3">1</div>
+                <p class="mb-0">
+                  Choose the subscription plan that best fits your needs and
+                  sign up today.
+                </p>
+              </div>
+
+              <div class="mb-4 d-flex align-items-start">
+                <div class="step-circle me-3">2</div>
+                <p class="mb-0">
+                  Order your delicious meal using our mobile app or website. Or
+                  you can even call us!
+                </p>
+              </div>
+
+              <div class="mb-4 d-flex align-items-start">
+                <div class="step-circle me-3">3</div>
+                <p class="mb-0">
+                  Enjoy your meal after less than 20 minutes. See you the next
+                  time!
+                </p>
+              </div>
+
+              <div class="d-flex mt-4">
+                <a href="#"
+                  ><img
+                    src="https://imgs.search.brave.com/RDZWbNjeOV1F5uB26KHH0du-hYrHy6WB5jtMn0ZEef4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9saDMu/Z29vZ2xldXNlcmNv/bnRlbnQuY29tL2x4/c1hEQ2VJWDdpWWFN/SXp4bUo4dHRmRTNU/Uk5lQ0NOYkI5VFVX/VDBXMEQ5UjRKbGhl/bXR5V1VnMHpEUjY5/TkNWV0R2Vk1WZDl1/Wi1oREhFeG9xZlR4/Wm5JbFFyeDFwN21H/U3ItZz1lMzY1LXBh/LW51LXMw"
+                    alt="App Store"
+                    class="me-3"
+                    height="40"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="https://imgs.search.brave.com/XECUjIM9PnT0_FW3F-OWp6gFO9kuxoSyhMjeAdkl2eI/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly9saDMu/Z29vZ2xldXNlcmNv/bnRlbnQuY29tL2ds/MmxRX0w1RTNwQ1l5/bmFTMWMzVzdoeFEt/T1FXOTdzSUJTVjdq/YWRlWWE1aUh5ZHFF/aDBER0RwdFNwQ2lj/UXdhblBoSjVWX3hD/WWdiTF8tY1RMLUJX/c2lJVFRNc0NuMXV3/WF9qWHBsXzN1SmE2/eWV3blk9czAtcmot/YzB4ZmZmZmZm"
+                    alt="Google Play"
+                    height="40"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cities -->
+      <section id="cities" class="py-5 bg-light text-center">
+        <div class="container">
+          <h2 class="mb-5">We’re in these cities</h2>
+
+          <div class="row g-4">
+            <!-- Vishakapatnam -->
+            <div class="col-md-3 text-start">
+              <img
+                src="https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcQvW_1qyBk_69uLUA2bWjnNO1Kjd4pqAwDXsW40Y83_MuzG_qygh_ptujgoaFxouLMh"
+                class="img-fluid rounded mb-3 h-50 w-100"
+                alt="Vishakapatnam"
+              />
+              <h5 class="fw-bold">Vishakapatnam</h5>
+              <br />
+              <p class="text-secondary lh-lg mb-1">
+                <i class="ion-ios-person text-warning me-1"></i>1600+ eaters<br />
+                <i class="ion-ios-star text-warning me-1"></i>60+ chefs
+              </p>
+              <br />
+              <p class="text-muted lh-sm">
+                <i class="ion-social-twitter text-warning me-1"></i>
+                <a
+                  href="https://twitter.com/omnifood_vishaka"
+                  target="_blank"
+                  class="link-hover"
+                  >@omnifood_vishaka</a
+                >
+              </p>
+            </div>
+
+            <!-- Kadapa -->
+            <div class="col-md-3 text-start">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/62/200_years_memorable_pylon.jpg"
+                class="img-fluid rounded mb-3 h-50 w-100"
+                alt="Kadapa"
+              />
+              <h5 class="fw-bold">Kadapa</h5>
+              <br />
+              <p class="text-secondary lh-lg mb-1">
+                <i class="ion-ios-person text-warning me-1"></i>3700+ eaters<br />
+                <i class="ion-ios-star text-warning me-1"></i>160+ chefs
+              </p>
+              <br />
+              <p class="text-muted lh-sm">
+                <i class="ion-social-twitter text-warning me-1"></i>
+                <a
+                  href="https://twitter.com/omnifood_kadapa"
+                  target="_blank"
+                  class="link-hover"
+                  >@omnifood_kadapa</a
+                >
+              </p>
+            </div>
+
+            <!-- Tirupathi -->
+            <div class="col-md-3 text-start">
+              <img
+                src="https://cdn.britannica.com/22/156222-004-39BC36C4/Sri-Venkateswara-Swamy-Temple-Tirumala-Tirupati-India.jpg"
+                class="img-fluid rounded mb-3 h-50 w-100"
+                alt="Tirupathi"
+              />
+              <h5 class="fw-bold">Tirupathi</h5>
+              <br />
+              <p class="text-secondary lh-lg mb-1">
+                <i class="ion-ios-person text-warning me-1"></i>2300+ eaters<br />
+                <i class="ion-ios-star text-warning me-1"></i>110+ chefs
+              </p>
+              <br />
+              <p class="text-muted lh-sm">
+                <i class="ion-social-twitter text-warning me-1"></i>
+                <a
+                  href="https://twitter.com/omnifood_tpt"
+                  target="_blank"
+                  class="link-hover"
+                  >@omnifood_tpt</a
+                >
+              </p>
+            </div>
+
+            <!-- Kurnool -->
+            <div class="col-md-3 text-start">
+              <img
+                src="https://t1.gstatic.com/licensed-image?q=tbn:ANd9GcSGKFa9RRoUxxfZ1SFabJyZb7yeiP_-iKp_3SClyfqvZwu53Sa__NQkUG6xnLC5kTD0"
+                class="img-fluid rounded mb-3 h-50 w-100"
+                alt="Kurnool"
+              />
+              <h5 class="fw-bold">Kurnool</h5>
+              <br />
+              <p class="text-secondary lh-lg mb-1">
+                <i class="ion-ios-person text-warning me-1"></i>1200+ eaters<br />
+                <i class="ion-ios-star text-warning me-1"></i>50+ chefs
+              </p>
+              <br />
+              <p class="text-muted lh-sm">
+                <i class="ion-social-twitter text-warning me-1"></i>
+                <a
+                  href="https://twitter.com/omnifood_kurnool"
+                  target="_blank"
+                  class="link-hover"
+                  >@omnifood_kurnool</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section
+        class="py-5 text-white text-center position-relative"
+        style="background: linear-gradient(135deg, #6a11cb, #fd7e14)"
+      >
+        <div class="mask position-absolute w-100 h-100"></div>
+
+        <div class="container position-relative">
+          <h2 class="mb-5 display-6">Our customers can’t live without us</h2>
+
+          <div class="row g-4">
+            <!-- Customer 1 -->
+            <div class="col-md-4">
+              <div
+                class="p-4 bg-transparent border border-light rounded testimonial-card h-100"
+              >
+                <p class="mb-4 fst-italic">
+                  “Omnifood is just awesome! I couldn’t live without their daily
+                  meals!”
+                </p>
+                <div class="d-flex align-items-center justify-content-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    class="rounded-circle me-3"
+                    height="50"
+                    width="50"
+                    alt="Customer 1"
+                  />
+                  <h6 class="mb-0 fw-normal">Ravi Teja</h6>
+                </div>
+              </div>
+            </div>
+
+            <!-- Customer 2 -->
+            <div class="col-md-4">
+              <div
+                class="p-4 bg-transparent border border-light rounded testimonial-card h-100"
+              >
+                <p class="mb-4 fst-italic">
+                  “Inexpensive, healthy and great-tasting meals. Me and my
+                  family love it!”
+                </p>
+                <div class="d-flex align-items-center justify-content-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/45.jpg"
+                    class="rounded-circle me-3"
+                    height="50"
+                    width="50"
+                    alt="Customer 2"
+                  />
+                  <h6 class="mb-0 fw-normal">Sravani Reddy</h6>
+                </div>
+              </div>
+            </div>
+
+            <!-- Customer 3 -->
+            <div class="col-md-4">
+              <div
+                class="p-4 bg-transparent border border-light rounded testimonial-card h-100"
+              >
+                <p class="mb-4 fst-italic">
+                  “I was looking for a reliable service. Best food delivery in
+                  Andhra!”
+                </p>
+                <div class="d-flex align-items-center justify-content-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/65.jpg"
+                    class="rounded-circle me-3"
+                    height="50"
+                    width="50"
+                    alt="Customer 3"
+                  />
+                  <h6 class="mb-0 fw-normal">Naveen Kumar</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="plans" class="py-5" style="background-color: #fdf6f0">
+        <div class="container">
+          <h2 class="mb-5 text-center display-6 fw-semibold">
+            Start eating healthy today
+          </h2>
+          <div class="row g-4">
+            <!-- Andhra Premium -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm plan-card border-0">
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold">Andhra Premium</h5>
+                  <p class="display-6 text-primary">
+                    ₹3,299<span class="fs-5">/month</span>
+                  </p>
+                  <ul class="list-unstyled mb-4">
+                    <li>
+                      <i class="ion-ios-checkmark-empty text-success me-2"></i>1
+                      Andhra-style meal/day
+                    </li>
+                    <li>
+                      <i class="ion-ios-checkmark-empty text-success me-2"></i
+                      >Order anytime
+                    </li>
+                    <li>
+                      <i class="ion-ios-checkmark-empty text-success me-2"></i
+                      >Chef special biryani & curries
+                    </li>
+                    <li>
+                      <i class="ion-ios-checkmark-empty text-success me-2"></i
+                      >Free delivery across AP
+                    </li>
+                  </ul>
+                  <a href="#" class="btn btn-primary w-100">Subscribe Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pro Veg Plan -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm plan-card border-0">
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold">Veg Pro</h5>
+                  <p class="display-6 text-primary">
+                    ₹1,199<span class="fs-5">/month</span>
+                  </p>
+                  <ul class="list-unstyled mb-4">
+                    <li>
+                      <i class="ion-ios-checkmark-empty text-success me-2"></i
+                      >10 meals/month
+                    </li>
+                    <li>
+                      <i class="ion-ios-checkmark-empty text-success me-2"></i
+                      >Order anytime
+                    </li>
+                    <li>
+                      <i class="ion-ios-checkmark-empty text-success me-2"></i
+                      >Includes Andhra veg thali
+                    </li>
+                    <li>
+                      <i class="ion-ios-checkmark-empty text-success me-2"></i
+                      >Free delivery
+                    </li>
+                  </ul>
+                  <a href="#" class="btn btn-outline-primary w-100"
+                    >Subscribe Now</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Starter Plan -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm plan-card border-0">
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold">Starter</h5>
+                  <p class="display-6 text-primary">
+                    ₹149<span class="fs-5">/meal</span>
+                  </p>
+                  <ul class="list-unstyled mb-4">
+                    <li>
+                      <i class="ion-ios-checkmark-empty text-success me-2"></i>1
+                      full meal
+                    </li>
+                    <li>
+                      <i class="ion-ios-checkmark-empty text-success me-2"></i
+                      >Order between 8AM–12PM
+                    </li>
+                    <li>
+                      <i class="ion-ios-close-empty text-danger me-2"></i>Chef
+                      specials not included
+                    </li>
+                    <li>
+                      <i class="ion-ios-checkmark-empty text-success me-2"></i
+                      >Free delivery
+                    </li>
+                  </ul>
+                  <a href="#" class="btn btn-outline-primary w-100"
+                    >Order Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact & Map Section -->
+      <section class="position-relative" style="height: 31.25rem" id="contact">
+        <div id="map" class="z-n1" style="height: 31.25rem"></div>
+
+        <!-- Contact Form (Floating Card) -->
+        <div
+          class="position-absolute bg-white bg-opacity-75 p-4 shadow rounded"
+          style="top: 20px; right: 20px; width: 350px"
+        >
+          <h5 class="mb-3 text-primary">We're happy to hear from you</h5>
+
+          <form id="contact-form">
+            <div class="mb-1">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" required />
+            </div>
+
+            <div class="mb-1">
+              <label class="form-label">How did you find us?</label>
+              <select name="find-us" class="form-select">
+                <option>Friends</option>
+                <option>Search Engine</option>
+                <option>Ad</option>
+                <option>Local Event</option>
+              </select>
+            </div>
+
+            <div class="form-check mb-1">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="newsletter"
+                checked
+              />
+              <label class="form-check-label" for="newsletter"
+                >Subscribe to newsletter</label
+              >
+            </div>
+
+            <div class="mb-1">
+              <textarea
+                name="message"
+                class="form-control"
+                rows="3"
+                placeholder="Your message..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+              Send it!
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center"
+      >
+        <ul class="list-inline mb-3 mb-md-0">
+          <li class="list-inline-item">
+            <a href="#" class="text-secondary">About Us</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="text-secondary">Careers</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="text-secondary">Support</a>
+          </li>
+        </ul>
+        <ul class="list-inline mb-3 mb-md-0">
+          <li class="list-inline-item">
+            <a href="#" class="text-secondary"
+              ><i class="ion-social-facebook"></i
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="text-secondary"
+              ><i class="ion-social-twitter"></i
+            ></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#" class="text-secondary"
+              ><i class="ion-social-instagram"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="text-center text-secondary mt-2" id="footer-time">
+        &copy;Omnifoods 2025
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

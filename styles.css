@@ -1,0 +1,138 @@
+body {
+  font-family: "Lato", sans-serif;
+  color: #555;
+  margin: 0;
+}
+
+nav {
+  height: 7vh;
+}
+
+nav ul li:hover {
+  border-bottom: solid 0.125rem #e67622; /* 2px → 0.125rem */
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 93vh;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.navbar-brand img {
+  transition: opacity 0.3s; /* 0.3s stays as is */
+}
+
+.hero-text-box h1 {
+  word-spacing: 0.25rem; /* 4px → 0.25rem */
+  letter-spacing: 0.0625rem; /* 1px → 0.0625rem */
+}
+
+.hero-text-box .btn-primary {
+  background-color: #e67622;
+  border-color: #e67622;
+}
+
+.hero-text-box .btn-primary:hover {
+  background-color: #cf6d17;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  perspective: 62.5rem; /* 1000px → 62.5rem */
+}
+
+.card:hover {
+  transform: translateY(-0.625rem); /* 10px → 0.625rem */
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1); /* 10px 20px → 0.625rem 1.25rem */
+  border-color: #e67622;
+}
+
+.card-img-top {
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+@keyframes flip-spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.card:hover .card-img-top {
+  animation: flip-spin 0.5s ease forwards;
+}
+
+.card img {
+  height: 15.625rem; /* 250px → 15.625rem */
+}
+
+#meals img {
+  opacity: 0.85;
+  transform: scale(1.05);
+  transition: transform 0.5s, opacity 0.5s;
+  height: 15.625rem; /* 250px → 15.625rem */
+  width: 100%;
+}
+
+#meals img:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.step-circle {
+  width: 2.5rem; /* 40px → 2.5rem */
+  height: 2.5rem; /* 40px → 2.5rem */
+  background-color: #fd7e14;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 2.5rem; /* 40px → 2.5rem */
+  font-weight: bold;
+  font-size: 1.125rem; /* 18px → 1.125rem */
+  flex-shrink: 0;
+}
+
+.link-hover {
+  color: black;
+  text-decoration: none;
+}
+
+.link-hover:hover {
+  color: #fd7e14;
+  text-decoration: underline;
+}
+
+.testimonial-card {
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-0.3125rem); /* 5px → 0.3125rem */
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.mask {
+  z-index: 1;
+}
+
+.position-relative > .container {
+  z-index: 2;
+}
+
+.testimonial-card p {
+  font-size: 1.05rem; /* close to original 16.8px */
+  line-height: 1.7;
+}
