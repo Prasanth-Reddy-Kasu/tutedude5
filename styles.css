@@ -195,6 +195,12 @@ h3 {
   .navbar-brand img {
     height: 2.5rem;
   }
+  nav{
+  height:2.5rem;
+  }
+  #map{
+    z-index:0;
+  }
 
   .step-circle {
     font-size: 0.875rem;
