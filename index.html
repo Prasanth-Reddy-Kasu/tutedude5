@@ -612,27 +612,24 @@
       </section>
 
       <!-- Contact & Map Section -->
-      <section class="position-relative" style="height: 31.25rem" id="contact">
+      <section class="position-relative" id="contact">
         <div id="map" class="z-n1" style="height: 31.25rem"></div>
 
-        <!-- Contact Form (Floating Card) -->
+        <!-- Contact Form Floating on Large Screens -->
         <div
-          class="position-absolute bg-white bg-opacity-75 p-4 shadow rounded"
-          style="top: 20px; right: 20px; width: 350px"
+          class="position-absolute d-none d-md-block bg-white bg-opacity-75 col-md-4 p-4 shadow rounded"
+          style="top: 1.3rem; right: 1.25rem; z-index: 10"
         >
           <h5 class="mb-3 text-primary">We're happy to hear from you</h5>
-
           <form id="contact-form">
             <div class="mb-1">
               <label class="form-label">Name</label>
               <input type="text" class="form-control" name="name" required />
             </div>
-
             <div class="mb-3">
               <label class="form-label">Email</label>
               <input type="email" class="form-control" name="email" required />
             </div>
-
             <div class="mb-1">
               <label class="form-label">How did you find us?</label>
               <select name="find-us" class="form-select">
@@ -642,7 +639,6 @@
                 <option>Local Event</option>
               </select>
             </div>
-
             <div class="form-check mb-1">
               <input
                 type="checkbox"
@@ -654,7 +650,52 @@
                 >Subscribe to newsletter</label
               >
             </div>
+            <div class="mb-1">
+              <textarea
+                name="message"
+                class="form-control"
+                rows="2"
+                placeholder="Your message..."
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">
+              Send it!
+            </button>
+          </form>
+        </div>
 
+        <!-- Contact Form Full Width on Small Screens -->
+        <div class="d-block d-md-none bg-white p-4 shadow rounded mt-3 w-100">
+          <h5 class="mb-3 text-primary">We're happy to hear from you</h5>
+          <form id="contact-form-mobile">
+            <div class="mb-1">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" required />
+            </div>
+            <div class="mb-1">
+              <label class="form-label">How did you find us?</label>
+              <select name="find-us" class="form-select">
+                <option>Friends</option>
+                <option>Search Engine</option>
+                <option>Ad</option>
+                <option>Local Event</option>
+              </select>
+            </div>
+            <div class="form-check mb-1">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="newsletter-mobile"
+                checked
+              />
+              <label class="form-check-label" for="newsletter-mobile"
+                >Subscribe to newsletter</label
+              >
+            </div>
             <div class="mb-1">
               <textarea
                 name="message"
@@ -663,7 +704,6 @@
                 placeholder="Your message..."
               ></textarea>
             </div>
-
             <button type="submit" class="btn btn-primary w-100">
               Send it!
             </button>
@@ -707,7 +747,7 @@
         </ul>
       </div>
       <div class="text-center text-secondary mt-2" id="footer-time">
-        &copy;Omnifoods 2025
+        &copy; Omnifoods 2025
       </div>
     </footer>
 
