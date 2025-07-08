@@ -9,7 +9,7 @@ nav {
 }
 
 nav ul li:hover {
-  border-bottom: solid 0.125rem #e67622; /* 2px → 0.125rem */
+  border-bottom: solid 0.125rem #e67622;
 }
 
 header {
@@ -28,12 +28,12 @@ h3 {
 }
 
 .navbar-brand img {
-  transition: opacity 0.3s; /* 0.3s stays as is */
+  transition: opacity 0.3s;
 }
 
 .hero-text-box h1 {
-  word-spacing: 0.25rem; /* 4px → 0.25rem */
-  letter-spacing: 0.0625rem; /* 1px → 0.0625rem */
+  word-spacing: 0.25rem;
+  letter-spacing: 0.0625rem;
 }
 
 .hero-text-box .btn-primary {
@@ -47,12 +47,12 @@ h3 {
 
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  perspective: 62.5rem; /* 1000px → 62.5rem */
+  perspective: 62.5rem;
 }
 
 .card:hover {
-  transform: translateY(-0.625rem); /* 10px → 0.625rem */
-  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1); /* 10px 20px → 0.625rem 1.25rem */
+  transform: translateY(-0.625rem);
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
   border-color: #e67622;
 }
 
@@ -76,14 +76,14 @@ h3 {
 }
 
 .card img {
-  height: 15.625rem; /* 250px → 15.625rem */
+  height: 15.625rem;
 }
 
 #meals img {
   opacity: 0.85;
   transform: scale(1.05);
   transition: transform 0.5s, opacity 0.5s;
-  height: 15.625rem; /* 250px → 15.625rem */
+  height: 15.625rem;
   width: 100%;
 }
 
@@ -93,15 +93,15 @@ h3 {
 }
 
 .step-circle {
-  width: 2.5rem; /* 40px → 2.5rem */
-  height: 2.5rem; /* 40px → 2.5rem */
+  width: 2.5rem;
+  height: 2.5rem;
   background-color: #fd7e14;
   color: #fff;
   border-radius: 50%;
   text-align: center;
-  line-height: 2.5rem; /* 40px → 2.5rem */
+  line-height: 2.5rem;
   font-weight: bold;
-  font-size: 1.125rem; /* 18px → 1.125rem */
+  font-size: 1.125rem;
   flex-shrink: 0;
 }
 
@@ -120,7 +120,7 @@ h3 {
 }
 
 .testimonial-card:hover {
-  transform: translateY(-0.3125rem); /* 5px → 0.3125rem */
+  transform: translateY(-0.3125rem);
   background-color: rgba(255, 255, 255, 0.05);
 }
 
@@ -133,9 +133,10 @@ h3 {
 }
 
 .testimonial-card p {
-  font-size: 1.05rem; /* close to original 16.8px */
+  font-size: 1.05rem;
   line-height: 1.7;
 }
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   header {
@@ -174,6 +175,15 @@ h3 {
 
   .testimonial-card p {
     font-size: 0.95rem;
+  }
+
+  .plan-card .card-title {
+    font-size: 1.25rem;
+  }
+
+  .navbar-nav .nav-link {
+    text-align: center;
+    padding: 0.5rem 0;
   }
 }
 
