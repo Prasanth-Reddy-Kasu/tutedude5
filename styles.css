@@ -136,3 +136,68 @@ h3 {
   font-size: 1.05rem; /* close to original 16.8px */
   line-height: 1.7;
 }
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  header {
+    height: auto;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+
+  .hero-text-box h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text-box .btn {
+    margin-top: 1rem;
+    display: block;
+    width: 100%;
+  }
+
+  #meals img {
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .step-circle {
+    font-size: 1rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+  }
+
+  .position-absolute.bg-white {
+    position: static !important;
+    width: 100% !important;
+    margin-top: 2rem;
+  }
+
+  .testimonial-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-text-box h1 {
+    font-size: 1.75rem;
+  }
+
+  .navbar-brand img {
+    height: 2.5rem;
+  }
+
+  .step-circle {
+    font-size: 0.875rem;
+    width: 1.875rem;
+    height: 1.875rem;
+    line-height: 1.875rem;
+  }
+
+  .plan-card .card-title {
+    font-size: 1.125rem;
+  }
+
+  .testimonial-card h6 {
+    font-size: 0.95rem;
+  }
+}
