@@ -63,19 +63,6 @@ h3 {
   backface-visibility: hidden;
 }
 
-@keyframes flip-spin {
-  0% {
-    transform: rotateY(0deg);
-  }
-  100% {
-    transform: rotateY(360deg);
-  }
-}
-
-.card:hover .card-img-top {
-  animation: flip-spin 0.5s ease forwards;
-}
-
 .card img {
   height: 15.625rem;
 }
@@ -138,7 +125,7 @@ h3 {
   line-height: 1.7;
 }
 
-/* Responsive adjustments */
+/* Responsive*/
 @media (max-width: 768px) {
   header {
     height: auto;
